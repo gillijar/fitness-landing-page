@@ -1,0 +1,60 @@
+.header {
+  color: white;
+  position: relative;
+  background-color: #004bff;
+  grid-row: 2 / 3;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  grid-template-rows: 1fr 35vh 1fr;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5rem;
+
+  &__img {
+    width: 32.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  &__circle {
+    height: 31rem;
+    width: 31rem;
+    border: 1.5px dashed white;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__learn {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  &__read {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+
+  &__explore {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
+  &__btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,23 @@
+.motivation {
+  grid-column: col-start 2 / col-end 11;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 2rem;
+  padding-bottom: 4rem;
+
+  &__img {
+    width: 100%;
+    border-radius: 3px;
+    transform: translateY(-2.2rem);
+  }
+
+  &__text {
+    width: 70%;
+  }
+
+  &__heading {
+    width: 80%;
+  }
+}

@@ -1,0 +1,53 @@
+.newsletter {
+  grid-column: col-start 4 / col-end 9;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__main-heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $color-dark-1;
+  }
+
+  &__paragraph {
+    width: 60%;
+    margin-bottom: 3rem;
+  }
+
+  &__form {
+    height: 4rem;
+    width: 70%;
+    display: flex;
+  }
+
+  &__input {
+    height: 100%;
+    width: 80%;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+  }
+
+  &__btn {
+    height: 100%;
+    width: 20%;
+    background: $color-primary;
+    border: $color-primary;
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+  }
+}

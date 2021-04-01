@@ -1,0 +1,19 @@
+.nav {
+  grid-column: center-start / center-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__links {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $color-dark-1;
+  }
+}
