@@ -6,6 +6,11 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond(phone) {
+    grid-column: col-start 1 / col-end 12;
+    padding: 6.5rem 0;
+  }
+
   &__subscribe {
     display: flex;
     flex-direction: column;
@@ -37,6 +42,7 @@
     width: 80%;
     padding: 1.5rem;
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+    border: 1.5px solid $color-grey-light-1;
   }
 
   &__btn {
@@ -47,6 +53,7 @@
     color: $color-grey-light-1;
     text-transform: uppercase;
     font-size: 1.2rem;
+    font-weight: 500;
     letter-spacing: 0.1rem;
     cursor: pointer;
   }

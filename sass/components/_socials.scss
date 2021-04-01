@@ -6,6 +6,10 @@
   right: 0%;
   transform: translate(0%, -50%);
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &__accent-line {
     height: 2rem;
     width: 0.09rem;

@@ -10,6 +10,34 @@ $color-grey-light-1: #f9f7f6;
 // Font-family
 $font-family: "Roboto", sans-serif;
 
+// Media queries
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      // 600px => 600/16 = 37.5em
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    // 900px => 900/16 = 56.25em
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    // 1200px => 1200/16 = 75em
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    // 1800px => 1800/16 = 112.5em
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -21,6 +49,18 @@ $font-family: "Roboto", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
 }
 
 body {
@@ -35,4 +75,10 @@ body {
   grid-template-columns:
     [full-start] 3rem [center-start] repeat(12, [col-start] 1fr [col-end])
     [center-end] 3rem [full-end];
+
+  @include respond(phone) {
+    grid-template-columns:
+      [center-start] repeat(12, [col-start] 1fr [col-end])
+      [center-end];
+  }
 }

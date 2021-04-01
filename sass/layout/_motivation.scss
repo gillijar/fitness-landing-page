@@ -7,6 +7,15 @@
   grid-column-gap: 2rem;
   padding-bottom: 4rem;
 
+  @include respond(phone) {
+    padding-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
   &__img {
     width: 100%;
     border-radius: 3px;
@@ -15,9 +24,17 @@
 
   &__text {
     width: 70%;
+
+    @include respond(phone) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__heading {
     width: 80%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }

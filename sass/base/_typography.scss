@@ -8,6 +8,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  @include respond(phone) {
+    line-height: 1.2;
+  }
 }
 
 .heading-2 {

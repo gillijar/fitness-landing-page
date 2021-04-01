@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__link {

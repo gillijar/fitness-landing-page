@@ -8,6 +8,15 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -18,6 +27,9 @@ body {
   display: grid;
   grid-template-rows: 7vh 90vh repeat(6, min-content);
   grid-template-columns: [full-start] 3rem [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] 3rem [full-end]; }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      grid-template-columns: [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end]; } }
 
 .heading-1 {
   width: 100%;
@@ -29,6 +41,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-1 {
+      line-height: 1.2; } }
 
 .heading-2 {
   font-size: 2.6rem;
@@ -82,7 +97,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-column-gap: 2rem;
-    margin-top: 3.5rem; }
+    margin-top: 3.5rem;
+    max-width: 100%; }
   .features__card {
     padding: 5rem 1rem;
     display: flex;
@@ -92,6 +108,12 @@ body {
     box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
     margin-bottom: 2rem;
     border-radius: 3px; }
+    @media only screen and (max-width: 37.5em) {
+      .features__card {
+        width: 90%;
+        margin: 0 auto; }
+        .features__card:not(:last-child) {
+          margin-bottom: 2.5rem; } }
     .features__card-heading {
       margin-bottom: 2rem;
       font-size: 1.6rem;
@@ -120,6 +142,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .newsletter {
+      grid-column: col-start 1 / col-end 12;
+      padding: 6.5rem 0; } }
   .newsletter__subscribe {
     display: flex;
     flex-direction: column;
@@ -142,7 +168,8 @@ body {
     height: 100%;
     width: 80%;
     padding: 1.5rem;
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25); }
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+    border: 1.5px solid #f9f7f6; }
   .newsletter__btn {
     height: 100%;
     width: 20%;
@@ -151,6 +178,7 @@ body {
     color: #f9f7f6;
     text-transform: uppercase;
     font-size: 1.2rem;
+    font-weight: 500;
     letter-spacing: 0.1rem;
     cursor: pointer; }
 
@@ -161,6 +189,9 @@ body {
   top: 50%;
   right: 0%;
   transform: translate(0%, -50%); }
+  @media only screen and (max-width: 37.5em) {
+    .socials {
+      display: none; } }
   .socials__accent-line {
     height: 2rem;
     width: 0.09rem;
@@ -216,6 +247,13 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .trainers__profile {
+        height: 50vh;
+        width: 95%;
+        margin: 0 auto; }
+        .trainers__profile:not(:last-child) {
+          margin-bottom: 3rem; } }
     .trainers__profile-container {
       width: 100%;
       height: 85%;
@@ -250,6 +288,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2; }
+    @media only screen and (max-width: 37.5em) {
+      .header__img {
+        width: 75%; } }
   .header__circle {
     height: 31rem;
     width: 31rem;
@@ -286,14 +327,28 @@ body {
   align-items: center;
   grid-column-gap: 2rem;
   padding-bottom: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .motivation {
+      padding-top: 8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column-reverse;
+      text-align: center; } }
   .motivation__img {
     width: 100%;
     border-radius: 3px;
     transform: translateY(-2.2rem); }
   .motivation__text {
     width: 70%; }
+    @media only screen and (max-width: 37.5em) {
+      .motivation__text {
+        margin-bottom: 4rem; } }
   .motivation__heading {
     width: 80%; }
+    @media only screen and (max-width: 37.5em) {
+      .motivation__heading {
+        width: 100%; } }
 
 .nav {
   grid-column: center-start / center-end;
@@ -305,6 +360,9 @@ body {
     display: flex;
     justify-content: space-between;
     list-style: none; }
+    @media only screen and (max-width: 37.5em) {
+      .nav__links {
+        display: none; } }
   .nav__link {
     font-size: 1.4rem;
     font-weight: 600;
