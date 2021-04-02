@@ -6,6 +6,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond(tab-port) {
+    grid-column: col-start 3 / col-end 10;
+  }
+
   @include respond(phone) {
     grid-column: col-start 1 / col-end 12;
     padding: 6.5rem 0;

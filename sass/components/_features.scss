@@ -11,6 +11,14 @@
     grid-column-gap: 2rem;
     margin-top: 3.5rem;
     max-width: 100%;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -22,14 +30,11 @@
     box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
     margin-bottom: 2rem;
     border-radius: 3px;
+    cursor: pointer;
 
     @include respond(phone) {
       width: 90%;
-      margin: 0 auto;
-
-      &:not(:last-child) {
-        margin-bottom: 2.5rem;
-      }
+      margin: 0 auto 2rem auto;
     }
 
     &-heading {

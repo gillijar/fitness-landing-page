@@ -18,9 +18,13 @@
     align-items: center;
     margin-bottom: 2rem;
 
+    @include respond(tab-port) {
+      height: 30vh;
+    }
+
     @include respond(phone) {
       height: 50vh;
-      width: 95%;
+      width: 90%;
       margin: 0 auto;
 
       &:not(:last-child) {
@@ -36,7 +40,6 @@
 
     &-img {
       width: 100%;
-      object-fit: cover;
       border-radius: 3px;
     }
 

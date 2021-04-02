@@ -7,8 +7,11 @@
   grid-column-gap: 2rem;
   padding-bottom: 4rem;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     padding-top: 8rem;
+  }
+
+  @include respond(phone) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +23,10 @@
     width: 100%;
     border-radius: 3px;
     transform: translateY(-2.2rem);
+
+    @include respond(tab-port) {
+      transform: translateY(0);
+    }
   }
 
   &__text {

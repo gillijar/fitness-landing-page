@@ -7,12 +7,29 @@
   justify-items: center;
   position: relative;
 
+  @include respond(phone) {
+    padding-top: 3rem;
+    grid-template-rows: repeat(2, min-content);
+  }
+
   &__img {
     width: 100%;
+
+    @include respond(phone) {
+      grid-column: 2 / 3;
+    }
   }
 
   &__heading {
     width: 70%;
+
+    @include respond(tab-port) {
+      transform: translateY(-4rem);
+    }
+
+    @include respond(phone) {
+      transform: translateY(0);
+    }
   }
 
   &__review {
@@ -27,5 +44,13 @@
     padding: 2rem;
     border-radius: 3px;
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+
+    @include respond(phone) {
+      position: static;
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+      width: 90%;
+      margin-top: 2rem;
+    }
   }
 }
