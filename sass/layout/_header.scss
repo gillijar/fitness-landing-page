@@ -63,6 +63,10 @@
   &__explore {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
+
+    @include respond(phone) {
+      transform: translateY(3rem);
+    }
   }
 
   &__btn {
