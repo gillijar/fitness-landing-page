@@ -23,7 +23,11 @@
       crossorigin="anonymous"
     />
 
+    <!-- SVG Icons -->
     <link rel="stylesheet" type="text/css" href="/img/svg/sprite.svg" />
+
+    <!-- JavaScript -->
+    <script defer src="app.js"></script>
 
     <title>Fitness | Landing Page</title>
   </head>
@@ -36,6 +40,9 @@
         <li class="nav__link">SERVICES</li>
         <li class="nav__link">CONTACT US</li>
       </ul>
+
+      <!-- Burger nav for phone -->
+      <div class="burger"></div>
     </nav>
 
     <header class="header">
@@ -80,33 +87,33 @@
       </div>
 
       <div class="features__cards">
-        <div class="features__card">
+        <div class="features__card" id="1">
           <svg class="features__icon">
             <use xlink:href="/img/svg/sprite.svg#yoga" />
           </svg>
           <h4 class="features__card-heading">Proper Stretching</h4>
-          <button class="features__card-btn">Learn More</button>
+          <button class="features__card-btn btn-1">Learn More</button>
         </div>
-        <div class="features__card">
+        <div class="features__card" id="2">
           <svg class="features__icon">
             <use xlink:href="/img/svg/sprite.svg#workout" />
           </svg>
           <h4 class="features__card-heading">Cardio Training</h4>
-          <button class="features__card-btn">Learn More</button>
+          <button class="features__card-btn btn-2">Learn More</button>
         </div>
-        <div class="features__card">
+        <div class="features__card" id="3">
           <svg class="features__icon">
             <use xlink:href="/img/svg/sprite.svg#man" />
           </svg>
           <h4 class="features__card-heading">Strength Training</h4>
-          <button class="features__card-btn">Learn More</button>
+          <button class="features__card-btn btn-3">Learn More</button>
         </div>
-        <div class="features__card">
+        <div class="features__card" id="4">
           <svg class="features__icon">
             <use xlink:href="/img/svg/sprite.svg#yoga-position" />
           </svg>
           <h4 class="features__card-heading">Mindful Meditation</h4>
-          <button class="features__card-btn">Learn More</button>
+          <button class="features__card-btn btn-4">Learn More</button>
         </div>
       </div>
     </section>
@@ -202,3 +209,9 @@
     </div>
   </body>
 </html>
+
+<!-- 1. Finish media queries -->
+<!-- 2. Make comments in code for later understanding -->
+<!-- 4. Add some javascript for better functionality and UI experience -->
+<!-- 5. Revise code and delete unneeded items from some folders -->
+<!-- 6. Run build process -->
