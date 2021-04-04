@@ -8,6 +8,13 @@
     padding: 0 0 1rem 0;
   }
 
+  @include respond(phone) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+  }
+
   &__links {
     width: 30%;
     display: flex;
@@ -28,5 +35,36 @@
     font-weight: 600;
     color: $color-dark-1;
     cursor: pointer;
+  }
+}
+
+.burger {
+  display: none;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 100%;
+    width: 85%;
+    background-color: $color-dark-1;
+    position: absolute;
+  }
+
+  &::before {
+    top: 1rem;
+    right: 0;
+  }
+
+  &::after {
+    top: -1rem;
+    right: 0;
+  }
+
+  @include respond(phone) {
+    display: block;
+    height: 0.3rem;
+    width: 5rem;
+    background-color: $color-dark-1;
   }
 }
