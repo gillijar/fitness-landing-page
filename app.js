@@ -1,7 +1,9 @@
 "use strict";
 
+// Variables
 const featuresCard = document.querySelectorAll(".features__card");
 
+// Card button to pop up on hover
 featuresCard.forEach((card) => {
   const featuresBtn = document.querySelectorAll(".features__card-btn");
 
