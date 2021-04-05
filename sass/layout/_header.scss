@@ -20,7 +20,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 60%;
     }
 

@@ -12,7 +12,7 @@
     margin-top: 3.5rem;
     max-width: 100%;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -62,7 +62,7 @@
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
       }
 
-      @include respond(tab-port) {
+      @include respond(tab-land) {
         opacity: 1;
       }
     }
